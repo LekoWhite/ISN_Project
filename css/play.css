@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    background-color: #fdc0db;
+}
+
+header a{
+    position: absolute;
+
+    padding: .2em .4em;
+    margin: .1em .2em;
+
+    color: white;
+    background-color: #25160f;
+    border-radius: 3px;
+}
+
+header a::before{
+    content: "⬅ ";
+    font-size: 1.2em;
+}
+
+a{
+    text-decoration: none;
+    font-family: "Montserrat", "Roboto", Arial, Sans-Serif;
+}
+
+h1{
+
+    text-align: center;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+    font-size: 3em;
+
+    margin: 0;
+}
+
+#gameTable{
+    background-image: url(https://images.pexels.com/photos/131667/pexels-photo-131667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+
+    margin: 20px 2vw;
+    border: 5px solid #25160f;
+    border-radius: 10px;
+}
