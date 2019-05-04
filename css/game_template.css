@@ -43,6 +43,7 @@ h1{
 }
 
 #gameTable{
+    display: grid;
     background-image: url(https://images.pexels.com/photos/131667/pexels-photo-131667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 
     margin: 20px 2vw;
@@ -51,6 +52,20 @@ h1{
 }
 
 .card{
-    width: 20px;
-    height: 40px;
+    background-color: #27140c;
+
+    /* margin: .5vw; */
+    width: 106px;
+    height: 160px;
+
+    border-radius: 5px;
+}
+
+#cardDeck{
+    display: grid;
+
+    grid-gap: 1vw;
+
+    justify-items: center;
+    align-items: center;
 }
