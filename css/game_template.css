@@ -49,3 +49,8 @@ h1{
     border: 5px solid #25160f;
     border-radius: 10px;
 }
+
+.card{
+    width: 20px;
+    height: 40px;
+}
