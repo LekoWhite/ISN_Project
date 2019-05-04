@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+
+body {
+    display: grid;
+    min-height: 100vh;
+    width: 100%;
+    grid-template-rows: auto 1fr;
+    background-color: #fdc0db;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    z-index: 100;
+    width: 100%;
+    position: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    font-family: "Montserrat", "Roboto", Arial, Sans-Serif;
+    background-color: #37474f;
+    padding: 0.4em 0;
+  }
+  nav #text_logo {
+    color: #fdc0db;
+    font-weight: normal;
+    font-size: 1.7em;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+    margin: auto auto auto 1em;
+    position: relative;
+    top: -3px;
+  }
+  nav a {
+    display: inline-block;
+    border-radius: 0.1em;
+    color: #ccebfd;
+    font-weight: lighter;
+    text-decoration: none;
+    margin: auto 0 auto 0;
+    margin-right: 1em;
+  }
+  
+  #back_cta_nav {
+    font-family: "Montserrat", "Roboto", Arial, Sans-Serif;
+    text-decoration: none;
+    padding: 0.1em 0.3em;
+    border-radius: 0.2em;
+    color: white;
+    background-color: #25160f;
+  }
+
+#back_cta_nav::before{
+    content: "⬅ ";
+    font-size: 1.2em;
+}
+
+a{
+text-align: center;
+color: black;
+text-decoration: none;
+
+}
+
+#expi{
+    font-size: 3em;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+}
+
+
+#debutant{
+    font-size: 3em;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+}
+
+
+#normal{
+    font-size: 3em;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+}
+
+.menu {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 70%;
+}
