@@ -16,7 +16,7 @@ body {
 nav {
     z-index: 100;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
 }
 
 nav {
@@ -84,10 +84,33 @@ text-decoration: none;
     font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
 }
 
+h1{
+    font-size: 3em;
+    font-family: "Kaushan Script", "Roboto", Arial, Sans-Serif;
+}
 .menu {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
-    align-items: center;
-    height: 70%;
+    align-8: center;
+    height:80%;
+    position: absolute;
+    top: 90px;
+    right: 120px;
+}
+
+#waifu{
+    height: 647px;
+    width: 516px;
+    position: absolute;
+    left:50px;
+    bottom: 0px;
+}
+
+#bulle{
+    height: 262px;
+    width: 297px;
+    position: absolute;
+    left:360px;
+    top:85px;
+
 }
