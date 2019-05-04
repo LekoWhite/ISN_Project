@@ -1,7 +1,22 @@
 let cards = [
-    {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: 'https://upload.wikimedia.org/wikipedia/commons/d/d6/Jason_Momoa_by_Gage_Skidmore.jpg'},
+  {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: ''}
     {id: 1, first_coords: [0, 0], second_coords: [0, 0], url: 'https://vignette.wikia.nocookie.net/game-of-thrones-le-trone-de-fer/images/0/07/Daenerys_Targaryen.png/revision/latest?cb=20190419165904&path-prefix=fr'}
+    {id: 2, first_coords: [0, 0], second_coords: [0, 0], url: '../images/rin.jpeg'}
+    {id: 3, first_coords: [0, 0], second_coords: [0, 0], url: '../images/violet.jpeg'}
+    {id: 4, first_coords: [0, 0], second_coords: [0, 0], url: '../images/'}
+    {id: 5, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 6, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 7, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 8, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 9, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 10, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 11, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 12, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 13, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 14, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+    {id: 15, first_coords: [0, 0], second_coords: [0, 0], url: ''}
 ];
+
 
 let card_disposition = new Array;
 
