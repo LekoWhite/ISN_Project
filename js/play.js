@@ -157,6 +157,16 @@ function assignCoordinates(){
         pickedCoordinates.push(tempCoordinate);
     }
     console.log('PICKED COORDINATES :', pickedCoordinates);
+
+    // -- Assign Coordinates to the card objects --
+
+    for (let i, j = 0; i < cards.length; i++){
+        let card = cards[i];
+        card.first_coords = pickedCoordinates[j];
+        card.second_coords = pickedCoordinates[j+1];
+        console.log(cards);
+        j+=2;
+    }
 }
 
 function isEqual(a1, a2){ //ONLY TAKES THE COORDINATE ARRAY
