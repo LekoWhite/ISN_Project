@@ -1,5 +1,5 @@
 let cards = [
-  {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: ''}
+  {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: '../images/ram.jpg'}
     {id: 1, first_coords: [0, 0], second_coords: [0, 0], url: '../images/dany.png'}
     {id: 2, first_coords: [0, 0], second_coords: [0, 0], url: '../images/rin.jpeg'}
     {id: 3, first_coords: [0, 0], second_coords: [0, 0], url: '../images/violet.jpeg'}
@@ -8,13 +8,13 @@ let cards = [
     {id: 6, first_coords: [0, 0], second_coords: [0, 0], url: '../images/guts.jpg'}
     {id: 7, first_coords: [0, 0], second_coords: [0, 0], url: '../images/macron.jpg'}
     {id: 8, first_coords: [0, 0], second_coords: [0, 0], url: '../images/mirorin.jpg'}
-    {id: 9, first_coords: [0, 0], second_coords: [0, 0], url: '../images/rem_ram.jpg'}
+    {id: 9, first_coords: [0, 0], second_coords: [0, 0], url: '../images/rem.jpg'}
     {id: 10, first_coords: [0, 0], second_coords: [0, 0], url: '../images/saber.jpg'}
     {id: 11, first_coords: [0, 0], second_coords: [0, 0], url: '../images/zero_two.jpg'}
     {id: 12, first_coords: [0, 0], second_coords: [0, 0], url: '../images/izuku.jpg'}
-    {id: 13, first_coords: [0, 0], second_coords: [0, 0], url: '../images/'}
-    {id: 14, first_coords: [0, 0], second_coords: [0, 0], url: '../images/'}
-    {id: 15, first_coords: [0, 0], second_coords: [0, 0], url: '../images/'}
+    {id: 13, first_coords: [0, 0], second_coords: [0, 0], url: '../images/arya.jpg'}
+    {id: 14, first_coords: [0, 0], second_coords: [0, 0], url: '../images/goku.jpg'}
+    {id: 15, first_coords: [0, 0], second_coords: [0, 0], url: '../images/america.jpg'}
 ];
 
 
