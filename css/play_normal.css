@@ -9,6 +9,6 @@
 
 
 .card{
-    background-image: url(../images/zero_two.jpg);
-    background-size: 110px 180px;
+    background-image: url(../images/carte.jpg);
+    background-size: cover;
 }

@@ -9,6 +9,6 @@
 
 
 .card{
-    background-image: url(../images/dany.png);
-    background-size: 110px 180px;
+    background-image: url(../images/carte.jpg);
+    background-size: cover;
 }
