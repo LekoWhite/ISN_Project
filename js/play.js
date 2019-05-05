@@ -123,7 +123,7 @@ function cardClicked(cardElement, cardIndex){
         currentCardElement = cardElement;
         currentCardId = id;
         gameState = 1;
-        instructionsElement.text('CHOOSE A SECOND CARD ! (HOPE IT\'S THE SAME !)');
+        instructionsElement.text('CHOISISSEZ UNE DEUXIEME CARTE ! (LA MEME, ON ESPERE !)');
     }
     else if ( gameState === 1 ){
         currentCardElement2 = cardElement;
@@ -145,13 +145,13 @@ function cardClicked(cardElement, cardIndex){
         }
     }
     else if ( gameState === 2 ){
-        instructionsElement.text('YOU CAN\'T CHOOSE A THIRD CARD !');
+        instructionsElement.text('VOUS NE POUVEZ PAS CHOISIR UNE TROISIEME CARTE !');
         hideCard(cardElement);
     }
 }
 
 function flushCards(){
-    instructionsElement.text('CHOOSE A CARD TO FLIP !');
+    instructionsElement.text('CHOISISSEZ UNE CARTE A RETOURNER !');
 
     if(currentCardElement && (currentCardId != currentCardId2)){
         hideCard(currentCardElement);
