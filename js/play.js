@@ -111,6 +111,10 @@ function updateScore(){
         score += 100;
         scoreElement.text(score);
         flipedCards.push(currentCardId);
+
+        if( score === ((cardQuantity/2)*100) ){
+            alert("Vous avez GAGNÉ!  Contemplez votre victoire!");
+        }
     }
 }
 
