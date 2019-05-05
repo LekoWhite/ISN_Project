@@ -6,3 +6,8 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(6, 1fr);
 }
+
+.card{
+    background-image: url(../images/ram.jpg);
+    background-size: 100px 100px;
+}
