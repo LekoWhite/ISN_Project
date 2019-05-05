@@ -8,6 +8,7 @@
 }
 
 .card{
-    background-image: url(../images/ram.jpg);
-    background-size: 110px 180px;
+    background-image: url(../images/guts.jpg);
+    background-size: cover;
 }
+
