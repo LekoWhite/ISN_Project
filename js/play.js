@@ -3,7 +3,7 @@ let cards = [
     {id: 1, first_coords: [0, 0], second_coords: [0, 0], url: 'https://vignette.wikia.nocookie.net/game-of-thrones-le-trone-de-fer/images/0/07/Daenerys_Targaryen.png/revision/latest?cb=20190419165904&path-prefix=fr'}
 ];
 
-let card_disposition = new Array;
+let cardsPicked = new Array; // Array of ids of cards picked
 
 let isPlaying = false;
 
@@ -16,27 +16,29 @@ $(document).ready( function () {
     start_button.click( () => { 
         if (!isPlaying) {
             isPlaying = true;
-            setCardDispositon(18);  //TODO: Trouver un moyen d'avoir le nombre de cartes correspondant à la page
-            console.log(card_disposition);
+            setCardDispositon(18/2);  //TODO: Trouver un moyen d'avoir le nombre de cartes correspondant à la page
+            console.log(cardsPicked);
         }
     });
 });
 
 
 function setCardDispositon (cardQuantity) {
-    let alreadyPicked = new Array;
-    for (let i = 0; i < cardQuantity/2; i++){
+    let alreadyPickedNumbers = new Array;
+    for (let i = 0; i < cardQuantity; i++){
         // Pick a card to put in the set
         let currentCard = Math.floor(Math.random() * 16);
         // Check if already picked
-        for (alreadyPickedNumber of alreadyPicked){
-            if (alreadyPickedNumber === currentCard){
-                
+        for (alreadyPickedNumber of alreadyPickedNumbers){
+            if (currentCard === alreadyPickedNumber){
+                // If already picked, pick new number as long as we pick the same
+                do{
+                    currentCard = Math.floor(Math.random() * 16);
+                } while (currentCard === alreadyPickedNumber);
             }
         }
-        alreadyPicked.push(currentCard);
-        card_disposition[i] = currentCard;
-
+        alreadyPickedNumbers.push(currentCard);
+        cardsPicked[i] = currentCard;
     }
 
 }
