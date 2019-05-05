@@ -141,11 +141,12 @@ function assignCoordinates(){
 
     // -- Assign Coordinates to the card objects --
 
-    for (let i = 0; i < cards.length; i++){
+    for (let i, j = 0; i < cards.length; i++){
         let card = cards[i];
-        card.first_coords = pickedCoordinates[i];
-        card.second_coords = pickedCoordinates[i + 1];
+        card.first_coords = pickedCoordinates[j];
+        card.second_coords = pickedCoordinates[j+1];
         console.log(cards);
+        j+=2;
     }
 }
 
