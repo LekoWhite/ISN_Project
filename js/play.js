@@ -23,8 +23,6 @@ let cardsPicked = new Array; // Array of ids of cards picked
 
 let isPlaying = false;
 
-let currentPage; // 0 = débutant, 1 = Normal, 2 = Expérimenté
-
 let cardQuantity;
 
 let gridDimentions; // [xmax, ymax]
@@ -69,25 +67,34 @@ function getGridDimentions(currentPage){
     }
 }
 
+function startGame() {
+    pickCards(cardQuantity / 2);
+    console.log(cardsPicked);
+    assignCoordinates();
+}
+
 
 $(document).ready( () => {
     console.log('jQuery loaded!');
 
-    currentPage = checkCurrentPage();
+    const currentPage = checkCurrentPage();
     cardQuantity = getCardQuantity(currentPage);
     gridDimentions = getGridDimentions(currentPage);
 
     const start_button = $('#start');
-    const pause_button = $('#pause');
+    const restart_button = $('#restart');
 
     start_button.click( () => { 
         if (!isPlaying) {
             isPlaying = true;
-            pickCards(cardQuantity / 2);
-            console.log(cardsPicked);
-            assignCoordinates();
+            startGame();
+        }
+        else{
+            alert('Vous êtes déjà en jeu!');
         }
     });
+
+    restart_button.click(startGame);
 });
 
 
@@ -97,15 +104,15 @@ function pickCards (cardQuantity) {
         // Pick a card to put in the set
         let currentCard = Math.floor(Math.random() * 16);
         // Check if already picked
-        for (alreadyPickedNumber of alreadyPickedNumbers){
+        for (let j = 0; j < alreadyPickedNumbers.length; j++){
+            let alreadyPickedNumber = alreadyPickedNumbers[j]; 
+            // If already picked, pick new number
             if (currentCard === alreadyPickedNumber){
-                // If already picked, pick new number as long as we pick the same
-                do{
-                    currentCard = Math.floor(Math.random() * 16);
-                } while (currentCard === alreadyPickedNumber);
+                currentCard = Math.floor(Math.random() * 16);
+                j = -1; // Since we choose a new number we need to check the prevous ones as well (-1 to compensate for the increment at the end of the loop)
             }
         }
-        alreadyPickedNumbers.push(currentCard);
+        alreadyPickedNumbers.push(currentCard); // add picked numbers to the alreadyPicked numbers array
         cardsPicked[i] = currentCard;
     }
 }
@@ -116,4 +123,28 @@ function assignCoordinates(){
     // Pick random coordinates and store them
     let xmax = gridDimentions[0];
     let ymax = gridDimentions[1];
+
+    let alreadyPickedCoordinates = new Array;
+    for(let i = 0; i < cardQuantity; i++){
+        let tempCoordinate = [Math.floor(Math.random() * xmax), Math.floor(Math.random() * ymax)];
+        for (let j = 0; j < alreadyPickedCoordinates.length; j++){ // If already picked, pick new coordinates
+            alreadyPickedCoordinate = alreadyPickedCoordinates[j];
+            if(isEqual(tempCoordinate, alreadyPickedCoordinate)){
+                tempCoordinate = [Math.floor(Math.random() * xmax), Math.floor(Math.random() * ymax)];
+                j = -1; // Since we choose a new coordinate we need to check the prevous ones as well (-1 to compensate for the increment at the end of the loop)
+            }
+        }
+        alreadyPickedCoordinates.push(tempCoordinate);
+        pickedCoordinates.push(tempCoordinate);
+    }
+    console.log('PICKED COORDINATES :', pickedCoordinates);
+}
+
+function isEqual(a1, a2){ //ONLY TAKES THE COORDINATE ARRAY
+    if ((a1[0] === a2[0]) && (a1[1] === a2[1])){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
