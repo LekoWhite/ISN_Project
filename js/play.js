@@ -1,5 +1,5 @@
 let cards = [
-  {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: ''},
+    {id: 0, first_coords: [0, 0], second_coords: [0, 0], url: ''},
     {id: 1, first_coords: [0, 0], second_coords: [0, 0], url: '../images/dany.png'},
     {id: 2, first_coords: [0, 0], second_coords: [0, 0], url: '../images/rin.jpeg'},
     {id: 3, first_coords: [0, 0], second_coords: [0, 0], url: '../images/violet.jpeg'},
@@ -17,27 +17,81 @@ let cards = [
     {id: 15, first_coords: [0, 0], second_coords: [0, 0], url: '../images/'}
 ];
 
+
+
 let cardsPicked = new Array; // Array of ids of cards picked
 
 let isPlaying = false;
 
+let currentPage; // 0 = débutant, 1 = Normal, 2 = Expérimenté
 
-$(document).ready( function () {
+let cardQuantity;
+
+let gridDimentions; // [xmax, ymax]
+
+
+function checkCurrentPage(){
+    if (document.URL.includes('debutant')){
+        return 0;
+    }
+    if (document.URL.includes('normal')){
+        return 1;
+    }
+    if (document.URL.includes('experimente')){
+        return 2;
+    }
+    else{
+        window.alert('Erreur : Les noms des fichiers ont été changés et l\'url doit contenir "debutant" ou "normal" ou "experimente" .')
+    }
+}
+
+function getCardQuantity(currentPage){
+    if( currentPage === 0 ){
+        return 18;
+    }
+    if ( currentPage === 1){
+        return 20;
+    }
+    if ( currentPage === 2 ){
+        return 32;
+    }
+}
+
+function getGridDimentions(currentPage){
+    if( currentPage === 0 ){
+        return [6, 3];
+    }
+    if( currentPage === 1 ){
+        return [5, 4];
+    }
+    if( currentPage === 2 ){
+        return [8, 4];
+    }
+}
+
+
+$(document).ready( () => {
     console.log('jQuery loaded!');
+
+    currentPage = checkCurrentPage();
+    cardQuantity = getCardQuantity(currentPage);
+    gridDimentions = getGridDimentions(currentPage);
+
     const start_button = $('#start');
     const pause_button = $('#pause');
 
     start_button.click( () => { 
         if (!isPlaying) {
             isPlaying = true;
-            setCardDispositon(18/2);  //TODO: Trouver un moyen d'avoir le nombre de cartes correspondant à la page
+            pickCards(cardQuantity / 2);
             console.log(cardsPicked);
+            assignCoordinates();
         }
     });
 });
 
 
-function setCardDispositon (cardQuantity) {
+function pickCards (cardQuantity) {
     let alreadyPickedNumbers = new Array;
     for (let i = 0; i < cardQuantity; i++){
         // Pick a card to put in the set
@@ -54,5 +108,12 @@ function setCardDispositon (cardQuantity) {
         alreadyPickedNumbers.push(currentCard);
         cardsPicked[i] = currentCard;
     }
+}
 
+
+function assignCoordinates(){
+    let pickedCoordinates = new Array;  // [x1, x2], [y1, y2], [x1, x2], [y1, y2]
+    // Pick random coordinates and store them
+    let xmax = gridDimentions[0];
+    let ymax = gridDimentions[1];
 }
