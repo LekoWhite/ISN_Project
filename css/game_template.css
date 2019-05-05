@@ -4,7 +4,7 @@
 
 body{
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr auto;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -176,3 +176,36 @@ h1{
     background-size: 100% 100%;
 }
    
+
+
+#instructions{
+    background-color: #ffffff;
+
+    font-family: "Montserrat", "Roboto", Arial, Sans-Serif;
+    text-align: center;
+
+    margin: 5px 2vw;
+    padding: 10px 0;
+    border: 5px solid #25160f;
+    border-radius: 10px;
+}
+
+#score{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 1em;
+
+    min-width: 100px;
+
+    font-family: "Montserrat", "Roboto", Arial, Sans-Serif;
+    text-align: center;
+
+    background-color: #ffffff;
+
+    margin: 5px 2vw;
+    padding: 10px 0;
+    border: 5px solid #25160f;
+    border-radius: 10px;
+}
