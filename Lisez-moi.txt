@@ -1,0 +1,6 @@
+Résolution:
+	Autour de 1920x1080 pixels  (Full HD)
+
+Navigateur:
+	Google Chrome (développé sous Google Chrome)
+	Mozilla Firefox
