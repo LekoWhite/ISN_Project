@@ -1,21 +1,16 @@
 var timer = new Timer();
-$('#bip #start').click(function () {
+$('#chrono .start').click(function() {
     timer.start();
 });
 
-$('#bip #restart').click(function () {
-    timer.reset();
+$('#chrono .restart').click(function(){
+    timer.stop();
 });
 
-timer.addEventListener('secondsUpdated', function (e) {
-    $('#bip .timer').html(timer.getTimeValues().toString());
+timer.addEventListener('secondsUpdated', function(e){
+    $('#chrono .values').html(timer.getTimeValues().toString());
 });
 
-timer.addEventListener('started', function (e) {
-    $('#bip .timer').html(timer.getTimeValues().toString());
+timer.addEventListener('started', function(e){
+    $('#chrono .values').html(timer.getTimeValues().toString());
 });
-
-timer.addEventListener('reset', function (e) {
-    $('#bip .timer').html(timer.getTimeValues().toString());
-});
-                
