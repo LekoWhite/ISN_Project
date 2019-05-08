@@ -14,7 +14,7 @@ let cards = [
     {first_coords: 0, second_coords: 0, url: 'images/izuku.jpg'},
     {first_coords: 0, second_coords: 0, url: 'images/arya.jpg'},
     {first_coords: 0, second_coords: 0, url: 'images/goku.jpg'},
-    {first_coords: 0, second_coords: 0, url: 'images/america.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/america.jpg'}
 ];
 
 
