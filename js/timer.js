@@ -1,9 +1,10 @@
 var timer = new Timer();
-$('#chrono .start').click(function() {
+
+$('#chrono .startButton').click(function() {
     timer.start();
 });
 
-$('#chrono .restart').click(function(){
+$('#chrono .restartButton').click(function(){
     timer.stop();
 });
 

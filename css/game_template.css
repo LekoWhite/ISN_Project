@@ -78,7 +78,7 @@ h1{
  
 }
 
-.timer{
+#timer{
     width: 100px;
     height: 25px;
     position: absolute;
