@@ -1,20 +1,20 @@
 let cards = [
-    {id: 0, first_coords: 0, second_coords: 0, url: 'images/ram.jpg'},
-    {id: 1, first_coords: 0, second_coords: 0, url: 'images/dany.png'},
-    {id: 2, first_coords: 0, second_coords: 0, url: 'images/rin.jpg'},
-    {id: 3, first_coords: 0, second_coords: 0, url: 'images/violet.jpg'},
-    {id: 4, first_coords: 0, second_coords: 0, url: 'images/dustin.png'},
-    {id: 5, first_coords: 0, second_coords: 0, url: 'images/grumpy_cat.jpg'},
-    {id: 6, first_coords: 0, second_coords: 0, url: 'images/guts.jpg'},
-    {id: 7, first_coords: 0, second_coords: 0, url: 'images/macron.jpg'},
-    {id: 8, first_coords: 0, second_coords: 0, url: 'images/mirorin.jpg'},
-    {id: 9, first_coords: 0, second_coords: 0, url: 'images/rem.jpg'},
-    {id: 10, first_coords: 0, second_coords: 0, url: 'images/saber.jpg'},
-    {id: 11, first_coords: 0, second_coords: 0, url: 'images/zero_two.jpg'},
-    {id: 12, first_coords: 0, second_coords: 0, url: 'images/izuku.jpg'},
-    {id: 13, first_coords: 0, second_coords: 0, url: 'images/arya.jpg'},
-    {id: 14, first_coords: 0, second_coords: 0, url: 'images/goku.jpg'},
-    {id: 15, first_coords: 0, second_coords: 0, url: 'images/america.jpg'}
+    {first_coords: 0, second_coords: 0, url: 'images/ram.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/dany.png'},
+    {first_coords: 0, second_coords: 0, url: 'images/rin.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/violet.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/dustin.png'},
+    {first_coords: 0, second_coords: 0, url: 'images/grumpy_cat.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/guts.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/macron.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/mirorin.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/rem.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/saber.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/zero_two.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/izuku.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/arya.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/goku.jpg'},
+    {first_coords: 0, second_coords: 0, url: 'images/america.jpg'},
 ];
 
 
@@ -216,13 +216,13 @@ function pickCards (cardQuantity) {
     let alreadyPickedNumbers = new Array;
     for (let i = 0; i < cardQuantity; i++){
         // Pick a card to put in the set
-        let currentCard = Math.floor(Math.random() * 16);
+        let currentCard = Math.floor(Math.random() * cards.length);
         // Check if already picked
         for (let j = 0; j < alreadyPickedNumbers.length; j++){
             let alreadyPickedNumber = alreadyPickedNumbers[j]; 
             // If already picked, pick new number
             if ( currentCard === alreadyPickedNumber ){
-                currentCard = Math.floor(Math.random() * 16);
+                currentCard = Math.floor(Math.random() * cards.length);
                 j = -1; // Since we choose a new number we need to check the prevous ones as well (-1 to compensate for the increment at the end of the loop)
             }
         }
